@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: var(--font-rubik);
+}
+
+.markdown > * {
+  all: revert;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    
+    --background: 53 80% 98%;
+    --muted: 210 40% 96%; 
+
+    --foreground: 0 0% 14%; 
+    --subtitle: 215 16% 47%;
+
+    --radius: 0.5rem;
+  }
+  .dark {
+    
+    --background: 0 0% 14%;
+    --muted: 0 0% 20%;
+
+    --foreground: 53 80% 98%;
+    --subtitle: 215 16% 80%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
